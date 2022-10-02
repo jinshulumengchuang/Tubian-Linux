@@ -1,0 +1,15 @@
+#!/bin/bash
+cp -fa /usr/share/QQ/wineprefix ~/QQ
+cp -af /usr/share/winetricks/cache/winetricks ~/.cache
+chown "$USER":"$USER" ~/QQ -R
+export WINEPREFIX="$HOME"/QQ
+export WINEARCH=win32
+winetricks corefonts fakechinese
+mkdir -p ~/.local/share/applications
+echo '[Desktop Entry]' > ~/.local/share/applications/QQ.desktop
+echo 'Type=Application' >> ~/.local/share/applications/QQ.desktop
+echo 'Name=QQ' >> ~/.local/share/applications/QQ.desktop
+echo 'Exec=/bin/qq' >> ~/.local/share/applications/QQ.desktop
+echo 'Categories=Network;' >> ~/.local/share/applications/QQ.desktop
+wine start /unix /usr/share/QQ/QQ.exe 
+kbuildsycoca5

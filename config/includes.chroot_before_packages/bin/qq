@@ -1,0 +1,4 @@
+#!/bin/bash
+export WINEPREFIX="$HOME"/QQ
+/sbin/squid &
+wine start /unix ~/'QQ/drive_c/Program Files/Tencent/QQ/Bin/QQ.exe'

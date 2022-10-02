@@ -1,0 +1,7 @@
+#!/bin/bash
+sudo waydroid init -f -i /usr/share/waydroid-extra/images
+sudo sysctl -w kernel.unprivileged_bpf_disabled=0
+sudo systemctl stop waydroid-container.service
+sudo killall waydroid
+sudo systemctl start waydroid-container.service || sudo waydroid start container
+waydroid first-launch

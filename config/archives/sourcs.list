@@ -1,0 +1,4 @@
+
+deb http://mirrors.bfsu.edu.cn/debian bullseye  contrib non-free
+deb [trusted=yes] https://mirrors.tuna.tsinghua.edu.cn/wine-builds/debian bullseye main
+deb [trusted=yes] https://repo.waydro.id bullseye main

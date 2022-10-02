@@ -1,0 +1,6 @@
+#!/bin/bash
+export WINEPREFIX="$HOME"/Weixin
+export WINEARCH=win32
+cp -af /usr/share/winetricks/cache/winetricks ~/.cache
+winetricks corefonts fakechinese riched20
+wine start /unix /usr/share/Weixin/Weixin.exe
