@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo cat >>/var/lib/waydroid/waydroid.cfg <<EOF
+ro.hardware.gralloc=default
+ro.hardware.egl=swiftshader
+EOF

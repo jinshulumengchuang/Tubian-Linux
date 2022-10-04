@@ -1,0 +1,8 @@
+#!/bin/bash
+echo '默认的宽度为534 默认的高度为950'
+echo '请设定宽度，输入数字后回车'
+read wi
+echo '请设定高度，输入数字后回车'
+read he
+sudo su -l -c "echo $wi > /usr/share/android/wi"
+sudo su -l -c "echo $he > /usr/share/android/he"

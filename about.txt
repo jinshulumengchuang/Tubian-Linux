@@ -5,8 +5,7 @@ sudo lb build
 
 
 
-config/includes.chroot_before_packages/usr/share/QQ/ QQ安装程序
-config/includes.chroot_before_packages/usr/share/Weixin/  微信安装程序
+
 config/includes.chroot_before_packages/usr/share/winetricks/ winetriks ricded20  fakechinese corefonts 安装文件
 config/includes.chroot_before_packages/usr/share/waydroid-extra/ waydroid（安卓子系统）系统镜像
-config/includes.chroot_before_packages/usr/share/QQ/wineprefix Wine7.8构建，禁用 dxgl  qqguild.exe tcupd.exe
+

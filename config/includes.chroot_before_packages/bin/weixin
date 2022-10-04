@@ -1,3 +1,0 @@
-#!/bin/bash
-export WINEPREFIX="$HOME"/Weixin
-wine start /unix ~/'Weixin/drive_c/Program Files/Tencent/WeChat/WeChat.exe'

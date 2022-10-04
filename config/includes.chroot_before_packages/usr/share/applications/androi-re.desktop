@@ -1,0 +1,5 @@
+[Desktop Entry] 
+Name=调整Android窗口大小
+Exec=/bin/konsole -e android-resolustion
+Type=Application
+Categories=System;

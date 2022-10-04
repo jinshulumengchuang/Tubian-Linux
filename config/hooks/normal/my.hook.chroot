@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -fr  /usr/share/wayland-sessions /usr/share/applications/Waydroid.desktop /usr/share/applications/waydroid.market.desktop 
+

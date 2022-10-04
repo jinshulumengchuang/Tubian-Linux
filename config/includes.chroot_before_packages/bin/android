@@ -1,7 +1,10 @@
 #!/bin/bash
+wi=`cat /usr/share/android/wi`
+he=`cat /usr/share/android/he`
 sudo waydroid init -f -i /usr/share/waydroid-extra/images
 sudo sysctl -w kernel.unprivileged_bpf_disabled=0
 sudo systemctl stop waydroid-container.service
 sudo killall waydroid
 sudo systemctl start waydroid-container.service || sudo waydroid start container
+weston --width=$wi --height=$he &
 waydroid first-launch
