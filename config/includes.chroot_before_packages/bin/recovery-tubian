@@ -1,0 +1,13 @@
+#!/bin/bash 
+echo '安装时的数据分区在/dev的路径（如/dev/sda2）是？'
+read datap
+
+mkfs.ext4 $datap -F
+e2label $datap persistence
+mkdir -p  /mnt/install/data
+mount $datap /mnt/install/data
+cd  /mnt/install/data
+echo "/ union" > persistence.conf 
+sync
+
+reboot
