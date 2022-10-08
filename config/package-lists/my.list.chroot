@@ -9,7 +9,6 @@ cabextract
 unzip
 p7zip 
 zenity 
-calamares
 calamares-settings-debian
 firmware-linux-nonfree
 grub-efi-amd64
