@@ -1,0 +1,5 @@
+[Desktop Entry] 
+Name=Tubian特殊安装程序
+Exec=/bin/konsole -e tubian
+Type=Application
+Categories=System;

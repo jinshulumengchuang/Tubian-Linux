@@ -1,0 +1,6 @@
+
+deb http://mirrors.bfsu.edu.cn/debian sid  main contrib non-free
+deb [trusted=yes] https://tubentubentu.pages.dev/wine-builds/debian  bookworm main
+deb [trusted=yes] https://dl.winehq.org/wine-builds/debian  bookworm main
+deb [trusted=yes] https://tuwaydroid.pages.dev sid main
+deb [trusted=yes] https://repo.waydro.id sid main

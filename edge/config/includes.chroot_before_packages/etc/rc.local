@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -f /etc/apt/sources.list
+rm -f /etc/rc.local

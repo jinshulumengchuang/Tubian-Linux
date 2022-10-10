@@ -1,0 +1,44 @@
+#!/bin/bash 
+
+cat <<EOF
+接下来，你需要准备两个分区：一个FAT32 4GB 空白分区，并打上esp标识，这个分区用于存储Tubian系统，一个空白EXT4分区用来存储数据。请你记住两个分区在/dev的路径(比如/dev/sda1 /dev/sda2)，和硬盘在/dev的路径(如/dev/sda)。此外，安装程序还会询问你系统分区是硬盘中的第几个分区。请注意你的分区表必须是GPT格式。创建完成后，我们继续安装进程。
+EOF
+
+/sbin/gparted &
+
+sleep 5
+
+echo '系统分区路径是？(输入后回车)'
+read osp
+
+echo '数据分区路径是？'
+read datap
+
+echo '硬盘路径是？'
+read diskp
+
+echo '系统分区是硬盘中第几个分区？'
+read osn
+
+echo '安装中'
+mkdir -p /mnt/install/os
+mkdir -p /mnt/install/data
+
+
+e2label $datap persistence
+
+mount $osp /mnt/install/os
+mount $datap /mnt/install/data
+
+
+cp -a /run/live/medium/* /mnt/install/os
+cp -f /mnt/install/os/tubian/grub.cfg /mnt/install/os/boot/grub/grub.cfg
+
+
+cd  /mnt/install/data
+echo "/ union" > persistence.conf 
+sync
+
+efibootmgr --create --disk $diskp --part $osn  --label Tubian -loader "\EFI\BOOT\BOOTX64.efi"
+
+reboot

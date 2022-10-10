@@ -1,0 +1,3 @@
+#!/bin/bash
+cp -af /usr/share/winetricks/cache/winetricks ~/.cache
+winetricks fakechinese corefonts

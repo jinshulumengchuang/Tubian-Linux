@@ -1,0 +1,5 @@
+[Desktop Entry] 
+Name=修复Android子系统无法打开
+Exec=/bin/konsole -e android-fix
+Type=Application
+Categories=System;

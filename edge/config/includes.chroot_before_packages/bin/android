@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo waydroid container stop
+sudo waydroid init -f
+sudo systemctl start waydroid-container
+waydroid show-full-ui
